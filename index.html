@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+  	<meta charset="UTF-8">
+  	<title>Music History Turbo</title>
+  	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+  	<link rel="stylesheet" type="text/css" href="style.css">
+  </head>
+  <body>
+
+    <!-- NAVBAR -->
+
+    <nav class="navbar navbar-default">
+      <div class="container-fluid">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <img class="navbar-brand" src="http://freeiconbox.com/icon/256/31109.png">
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+          <ul class="nav navbar-nav">
+            <li><a id="listBtn" href="#">LIST</a></li>
+            <li><a id="addBtn" href="#">ADD</a></li>
+            <li><a href="#">PROFILE</a></li>
+          </ul>
+        </div><!-- /.navbar-collapse -->
+      </div><!-- /.container-fluid -->
+    </nav>
+	
+    <!-- MAIN BODY -->   
+
+    <!--SIDEBAR -->
+
+
+    <div id="main-outer-container">
+      <div class="row">
+        <div class="col-sm-2 col-md-2 sidebar">
+          <div id="imgdiv">
+           <img id="recordIMG img-responsive" src="http://static.tumblr.com/qbxweie/Usjm79us4/abavdisc.png" width="150px" height="150px">
+          </div>
+
+          <!-- DROP DOWN SELECTS -->
+          <div id="fullBtnContainer">
+            <div id="dropdowns">
+              <select class="select" id="artist-select" name="artist-select">
+                <option>SELECT ARTIST</option>
+                <option>Sam Cook</option>
+                <option>Tina Turner</option>
+                <option>Bob Marley</option>
+              </select>
+
+              <select class="select" id="album-select" name="album-select">
+                <option>SELECT ALBUM</option>
+                <option>Album one</option>
+                <option>Album two</option>
+                <option>Album three</option>
+              </select>
+            </div>
+          <!--CHECKBOXES CONTAINER ONE -->
+            <div id="checkboxesOne">
+              <input type="checkbox" name="rock" value="rock"> rock
+              <input type="checkbox" name="pop" value="pop"> pop
+              <input type="checkbox" name="jazz" value="jazz"> jazz
+            </div>
+          <!--CHECKBOXES CONTAINER TWO -->
+             <div id="checkboxesTwo">
+              <input type="checkbox" name="funk" value="funk"> funk
+              <input type="checkbox" name="hiphop" value="hiphop"> hiphop
+              <input type="checkbox" name="folk" value="folk"> folk
+            </div>
+
+            <div id="submitBtnDiv">
+              <input id="submitBtn" class="btn btn-default" type="submit" value="Submit">
+            </div>
+          </div>
+        </div> <!-- END OF SIDEBAR CONTAINER -->
+
+        <!--SONG CONTAINER -->
+      
+        <div class="col-sm-10 col-md-10 songcontainer">
+
+        <!-- USER INPUT BUTTONS DIV VIEW -->
+        
+          <div id="userInputView" class="hidden">
+            <div class="input-group">
+              <input id="songInput" type="text" class="form-control" placeholder="Song" aria-describedby="basic-addon1">
+              <input id="albumInput" type="text" class="form-control" placeholder="Album" aria-describedby="basic-addon1">
+              <input id="artistInput"  type="text" class="form-control" placeholder="Artist" aria-describedby="basic-addon1">
+              <div id="submitBtnDiv">
+                <input id="userSongSubmitBtn" class="btn btn-default" type="submit" value="Submit">
+              </div>
+            </div>
+          </div>  <!-- END OF USER INPUT -->
+
+          <div id="listView"></div>
+          <div id="moreBtnDiv"><button type="button" class="btn moreBtn">More</button></div>
+
+        </div>   <!--END OF SONG CONTAINER -->
+      </div> <!-- END OF ROW -->
+    </div>
+
+    
+    <script src="http://code.jquery.com/jquery-1.12.0.min.js"></script>
+    <script type="text/javascript" src="javascripts/songs.js"></script>	
+  </body>
+</html>
